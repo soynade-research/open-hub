@@ -16,6 +16,7 @@ Our work is modularized into several main repositories, covering the entire pipe
 | **Data Prep** | [**FulaSpeechCorpora**](https://github.com/cawoylel/FulaSpeechCorpora) | Scripts and pipelines for building aligned speech corpora. |
 | **Modeling** | [**windanam**](https://github.com/cawoylel/windanam) | Multi-dialectal Automatic Speech Recognition (ASR) models. |
 | **Tutorials and Education** | [**nlp4all**](https://github.com/cawoylel/nlp4all) | Step-by-step guides, tutorials, and code to reproduce our work|
+| **Synthetic Data Pipelie** | [**oolel-translator**](https://github.com/soynade-research/oolel-translator) | Batch inference pipeline for generating synthetic translation data at scale|
 
 ---
 
@@ -61,6 +62,21 @@ This is the core repository containing our work on Automatic Speech Recognition 
 We believe in democratizing access to AI. This repository is an implementation of our "NLP for All" concept which consists in openly sharing our journey and the methodologies behind building AI technologies for underpresented languages with step by step tutorials and guidelines.
 
 *   **Core Function:** Offer readily usable templates that other communities can leverage to develop similar technologies for their languages.
+
+### 5. oolel-translator (LLMs)
+**🔗 Link:** [github.com/cawoylel/nlp4all](https://github.com/soynade-research/oolel-translator)
+
+Oolel-Translator is a batch inference pipeline for generating synthetic translation data at scale. Point it at a Hugging Face dataset, pick your model, and it produces parallel text - thousands, if not millions, of rows.
+
+*   **Core Function:**
+
+- Runs on vLLM with a PyTorch fallback
+- Reads JSONL, JSON, or CSV inputs
+- Pulls datasets from the Hub and pushes outputs back automatically
+- Multi-GPU sharding and configurable memory utilization built in
+
+You can use it to build translation pairs for any language pair and fine-tune models on the output, or expand an existing dataset.
+
 ---
 
 ## Contributing
